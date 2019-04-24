@@ -1,6 +1,6 @@
 # Internet Usage Monitor - AWS Lambda Deployment
 
-Deployment based on [this article](https://hackernoon.com/running-selenium-and-headless-chrome-on-aws-lambda-layers-python-3-6-bd810503c6c3), however with a different set of versions for each component.
+Deployment based on [this article](https://hackernoon.com/running-selenium-and-headless-chrome-on-aws-lambda-layers-python-3-6-bd810503c6c3), with changes to the configuration inspired by [this post](http://robertorocha.info/setting-up-a-selenium-web-scraper-on-aws-lambda-with-python/).
 
  * serverless-chrome(headless-chromium): v1.0.0-55
  * ChromeDriver: v2.42
