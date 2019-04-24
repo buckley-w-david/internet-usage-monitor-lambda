@@ -1,0 +1,7 @@
+internet-usage-monitor
+node_modules
+package-lock.json
+.serverless
+
+seleniumLayer/chromedriver/
+seleniumLayer/selenium/
