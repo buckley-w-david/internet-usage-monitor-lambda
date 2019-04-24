@@ -1,0 +1,24 @@
+service: selenium-lambda
+
+provider:
+  name: aws
+  runtime: python3.6
+  region: us-east-1
+  timeout: 900
+
+custom:
+  packageExternal:
+    external:
+      - 'internet-usage-monitor/usage_monitor'
+
+functions:
+  scan:
+    handler: handler.scan
+    layers:
+      - ${cf:selenium-layer-dev.SeleniumLayerExport}
+      - ${cf:selenium-layer-dev.ChromedriverLayerExport}
+    events:
+      - schedule: rate(8 hours)
+
+plugins:
+  - serverless-package-external
