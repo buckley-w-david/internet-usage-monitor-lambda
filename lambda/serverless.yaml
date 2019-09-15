@@ -1,4 +1,4 @@
-service: selenium-lambda
+service: internet-usage-monitor-dev
 
 provider:
   name: aws
@@ -18,7 +18,7 @@ functions:
       - ${cf:selenium-layer-dev.SeleniumLayerExport}
       - ${cf:selenium-layer-dev.ChromedriverLayerExport}
     events:
-      - schedule: rate(8 hours)
+      - schedule: cron(0 0,6,12,18 * * ? *)
 
 plugins:
   - serverless-package-external
